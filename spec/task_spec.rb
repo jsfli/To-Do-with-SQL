@@ -1,6 +1,9 @@
 require('rspec')
 require('pry')
 require('task')
+require('pg')
+
+
 
   describe(Task) do
 
