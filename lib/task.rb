@@ -1,6 +1,3 @@
-require('pry')
-require('rspec')
-
 class Task
   attr_reader(:description, :list_id)
 
