@@ -22,7 +22,7 @@
 <h3>Add a task to <%= @list.name() %></h3>
 
 <form action="/tasks" method="post">
-  <input id="list_id" type="text" name="list_id" value="<%= @list.id() %>">
+  <input id="list_id" type="hidden" name="list_id" value="<%= @list.id() %>">
 
   <label for="description">Description of the task: </label>
   <input id="description" name="description" type="text">
