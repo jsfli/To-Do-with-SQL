@@ -22,3 +22,14 @@ describe("viewing all of the lists", {:type => :feature}) do
     expect(page).to have_content(list.name)
   end
 end
+
+describe("adding tasks to a list", {:type => :feature}) do
+  it("allows a uswer to add a task to a list") do
+    test_list = List.new({:name => "School stuff", :id => nil})
+    test_list.save()
+    visit("/lists/#{test_list.id()}")
+    fill_in("Description", {:with => "Learn SQL"})
+    click_button("Add task")
+    expect(page).to have_content("Success")
+  end
+end
